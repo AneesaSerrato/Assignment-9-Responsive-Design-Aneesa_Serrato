@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portfolio-Page</title>
+	<style>
+		
+	@font-face {
+    font-family:'Agbalumo';
+    src: url('Agbalumo-Regular.ttf') format('truetype');
+}
+	@font-face{
+	font-family:'Nunito';
+	src: url("Nunito-Italic-VariableFont_wght.ttf") format('truetype');
+		}
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        }
+
+body { 
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+        }
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+        }
+
+h1 {
+	font-family: 'Agbalumo', serif;
+    font-size: 68px;
+    color: #2c3e50;
+    font-style: italic;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+        }
+
+.subtitle {
+    font-size: 23px;
+	font-family: 'Nunito';
+    color: #34495e;
+    font-weight: 300;
+        }
+
+.portfolio-container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+.gallery {
+    display: flex;
+	justify-content: center;
+	justify-content: space-around;
+    padding: 20px;
+        }
+
+figure {
+    flex: 0 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+figure:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+a {
+    text-decoration: none;
+    display: inline-block;
+        }
+
+figure img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+        }
+
+figure img:hover {
+    border-color: #3498db;
+        }
+
+figcaption {
+    margin-top: 15px;
+    padding: 0 10px;
+        }
+
+figcaption .title {
+	font-family: 'Agbalumo', serif;
+    font-size: 16px;
+    font-weight: none;
+    color: #2c3e50;
+    margin-bottom: 5px;
+        }
+
+figcaption .description {
+    font-size: 13px;
+	font-family: 'Nunito';
+    color: #7f8c8d;
+    line-height: 1.4;
+    max-width: 200px;
+        }
+.photos{
+	text-align: center;
+	font-family: 'Agbalumo';
+    font-size: 48px;
+    color: #2c3e50;
+	margin-top: 30px		
+		}
+		
+.image-with-text {
+  margin-top: 30px;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  background: url('freephoto.jpg') center / cover no-repeat;
+}
+		
+.image-with-text img {
+ display: none;
+}
+.overlay-text {
+ width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: rgba(35, 31, 26, 0.6);
+  color: white;
+  text-align: center;
+  font-family: 'Nunito';
+  font-size: clamp(1rem, 3.5vw, 1.4rem);
+  line-height: 1.5;
+}
+	h2 {
+	font-family: 'Agbalumo', serif;
+    font-size: 55px;
+    color: #2c3e50;
+    font-style: italic;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+        }
+.overlay-text h2 {
+ font-size: clamp(1.75rem, 7vw, 3rem);
+  line-height: 1.2;
+  color: white;
+  margin-top: 0;
+  overflow-wrap: break-word;
+		}
+		
+		
+		
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 2px 3px 6px gray;
+	text-align: center;
+	font-family: 'Nunito';
+	font-size: clamp(0.8rem,2.5vw,1.1rem);
+		}
+ th {
+    background-color:lightslategray;
+    color: white;
+    padding: 10px;
+	  }
+ td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+		}
+ tbody tr:nth-child(odd) {
+    background: whitesmoke;
+  }
+th, td {
+  padding: 0.5rem 0.25rem;
+}
+			
+.contact-section {
+    max-width: 1200px;
+    margin: 50px auto;
+	text-align: center;
+	font-size: 15px;
+	color: #2c3e50;
+	font-family:'Nunito';
+	
+}
+
+
+
+form {
+    background: white;
+    padding: 30px;
+    border: 2px solid dimgray;
+    border-radius: 8px;
+    box-shadow: 2px 3px 6px darkgray;
+	text-align: left
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #34495e;
+}	
+		
+
+		
+.gallery, .cards, .portfolio-grid {
+  display: flex;          
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+
+
+.card, .gallery figure {
+  flex: 0 1 220px;
+  max-width: 100%;
+  width: 220px;           
+}
+
+		
+@media (min-width: 750px) {
+  body {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+}
+		
+		
+</style>
+
+</head>
+	
+<body>
+	<div class="header">
+        <h1>Portfolio</h1>
+        <p class="subtitle">Dog Portraits Collection</p>
+    </div>
+
+    <div class="portfolio-container">
+        <div class="gallery">
+            
+           
+<figure>
+     <a href="dog1.jpg" target="_blank">
+     <img src="dog1.jpg" width="350" height="400" alt/>
+     </a>
+<figcaption>
+     <div class="title">Tiny Dreams</div>
+     <div class="description">A serene portrait of a gentle golden color dog captured in soft, peaceful tones against a calming blue backdrop.</div>
+    </figcaption>
+</figure>
+
+           
+<figure>
+     <a href="dog2.jpg" target="_blank">
+     <img src="dog2.jpg" width="340" height="300" alt/>
+     </a>
+<figcaption>
+     <div class="title">Noble Spirit</div>
+     <div class="description">A striking portrait of a dignified dark dog with an elegant red collar, set against a vibrant blue background.</div>
+    </figcaption>
+</figure>
+
+            
+<figure>
+     <a href="dog3.jpg" target="_blank">
+     <img src="dog3.jpg" width="280" height="370" alt/>
+     </a>
+<figcaption>
+     <div class="title">Bright Personality</div>
+     <div class="description">A joyful mixed-breed portrait on a vibrant turquoise ground, radiating warmth and playful energy.</div>
+     </figcaption>
+</figure>
+
+            
+<figure>
+      <a href="dog4.jpg" target="_blank">
+      <img src="dog4.jpg" width="290" height="380" alt/> 
+	  </a>
+<figcaption>
+      <div class="title">Cozy Comfort</div>
+      <div class="description">A tender scene of a sweet terrier nestled in soft blankets, capturing a moment of peaceful contentment.</div>
+      </figcaption>
+</figure>
+
+     
+<figure>
+      <a href="dog5.jpg" target="_blank">
+      <img src="dog5.jpg" width="240" height="290" alt=""/>
+	  </a>
+<figcaption>
+      <div class="title">Scooter's Joy</div>
+      <div class="description">A cheerful portrait of a lovable companion on a bright blue background, complete with a personalized ID collar.</div>
+    </figcaption>
+</figure>
+
+
+<figure>
+      <a href="dog6.jpg" target="_blank">
+      <img src="dog6.jpg" width="230" height="280" alt=""/> </a>
+<figcaption>
+    <div class="title">Happy Greeting</div>
+    <div class="description">An exuberant dog portrait capturing pure joy and enthusiasm on a fresh turquoise canvas.</div>
+</figcaption>
+</figure>
+
+</div>
+		
+<table>	
+<thead>
+  <tr>
+    <th>Title</th>
+    <th>Subject</th>
+    <th>Medium</th>
+	<th>Dimensions</th>
+	<th>Status</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Tiny Dreams</td>
+    <td>Cocker Spaniel</td>
+    <td>Acrylic</td>
+	<td>8" x 10"</td>
+	<td>SOLD</td>
+  </tr> 
+</tbody>
+	
+<tbody>
+  <tr>
+    <td>Noble Spirit</td>
+    <td>Pit Bull</td>
+    <td>Acrylic</td>
+	<td>8" x 8"</td>
+	<td>SOLD</td>
+  </tr> 
+</tbody>
+<tbody>
+  <tr>
+    <td>Bright Personality</td>
+    <td>Miniature Pinscher Mix</td>
+    <td>Acrylic</td>
+	<td>8" x 10"</td>
+	<td>SOLD</td>
+  </tr> 
+</tbody>
+<tbody>
+  <tr>
+    <td>Cozy Comfort</td>
+    <td>Yorkie</td>
+    <td>Acrylic</td>
+	<td>20" x 24"</td>
+	<td>SOLD</td>
+  </tr> 
+</tbody>
+<tbody>
+  <tr>
+    <td>Scooter's Joy</td>
+    <td>Border Terrier</td>
+    <td>Acrylic</td>
+	<td>8" x 10"</td>
+	<td>SOLD</td>
+  </tr> 
+</tbody>
+<tbody>
+  <tr>
+    <td> Happy Greeting</td>
+    <td>Labrador Retriever</td>
+    <td>Acrylic</td>
+	<td>8" x 10"</td>
+	<td>SOLD</td>
+  </tr> 
+</tbody>
+</table>
+			
+
+<div class= "image-with-text">
+  <img src= "freephoto.jpg" alt="short description">
+	<div class= "overlay-text">
+	<h2> About this Portfolio </h2>
+		<p> This portfolio features hand-painted dog portraits created with acrylic on canvas. Each portrait in this collection was painted with heart and intention, created for customers who wanted to honor their beloved canine companions. Every brushstroke captures not just the likeness of a cherished pet, but the love and bond they share with their families. These hand-painted acrylic portraits are more than artwork—they're tributes to the joy, loyalty, and unconditional love that dogs bring into our lives. Whether it's a favorite toy, a trusted collar, or that special expression only their owner recognizes, each painting preserves a moment of connection.</p>
+	</div>
+	</div>
+
+	
+	<section class="contact-section">
+
+    <h2>Contact Me</h2>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
+        </fieldset>
+
+
+        <fieldset>
+            <legend>What are you contacting me about?</legend>
+
+            <input type="radio" id="portrait" name="reason" value="portrait">
+            <label for="portrait">Portrait Commission</label>
+
+            <input type="radio" id="question" name="reason" value="question">
+            <label for="question">General Question</label>
+
+            <input type="radio" id="other" name="reason" value="other">
+            <label for="other">Other</label>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>What are you interested in?</legend>
+
+            <input type="checkbox" id="dogportrait" name="interest" value="dogportrait">
+            <label for="dogportrait">Dog Portrait</label>
+
+            <input type="checkbox" id="artwork" name="interest" value="artwork">
+            <label for="artwork">Other Artwork</label>
+
+            <input type="checkbox" id="pricing" name="interest" value="pricing">
+            <label for="pricing">Pricing Information</label>
+
+        </fieldset>
+
+
+        <label for="contact-method">Preferred Contact Method:</label>
+
+        <select id="contact-method" name="contact-method">
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="either">Either</option>
+        </select>
+
+
+        <label for="comments">Message:</label>
+
+        <textarea id="comments" name="comments" rows="6"></textarea>
+
+
+        <input type="submit" value="Send Message">
+
+    </form>
+
+</section>
+	
+</div>
+</body>
+</html>
